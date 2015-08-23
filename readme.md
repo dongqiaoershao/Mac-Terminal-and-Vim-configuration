@@ -1,7 +1,7 @@
 
 
 # Mac上的vim各种配置方法
-## Solarized是目前最完整的Terminal/Editor/IDE配色项目，要在 Mac OS X 终端里舒服的使用命令行（至少）需要给3个工具配色，terminal、vim 和 ls。这里不得不提和Terminal相同功能的工具iTerm2。
+###### Solarized是目前最完整的Terminal/Editor/IDE配色项目，要在 Mac OS X 终端里舒服的使用命令行（至少）需要给3个工具配色，terminal、vim 和 ls。这里不得不提和Terminal相同功能的工具iTerm2。
 ### 1）下载Solarized：
     
     $ git clone git://github.com/altercation/solarized.git
@@ -15,57 +15,57 @@
     $ mkdir -p ~/.vim/colors
     $ cp solarized.vim ~/.vim/colors/
     $ vi ~/.vimrc
-    ``
+    ```
         输入以下内容：
         syntax on
         set background=dark
         colorscheme solarized
-    ``
+    ```
     
 ### 4）ls
-    ``
+    ```
     MacOSX是基于FreeBSD的，所以一些工具ls,top等都是BSD那一套，ls不是GNU ls，所以即使Terminal/iTerm2配置了颜色，
     但是在Mac上敲入ls命令也不会显示高亮，可以通过安装coreutils来解决（brew install coreutils），不过如果对ls颜色
     不挑剔的话有个简单办法就是在.bash_profile里输出CLICOLOR=1：
-    ``
+    ```
     
     $ vi ~/.bash_profile
-    ``
+    ```
         输入以下内容
         export CLICOLOR=1
-    ``
+    ```
 
 ### 5）ls高亮设置
     $ sudo brew install xz coreutils
     $ gdircolors --print-database > ~/.dir_colors
     $ vim ~/.bash_profile 添加以下代码
-    ``
+    ```
         输入以下内容：
         if brew list | grep coreutils > /dev/null ; then
             PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
             alias ls='ls -F --show-control-chars --color=auto'
             eval `gdircolors -b $HOME/.dir_colors`
         fi
-    ``
+    ```
 
 ### 6）grep高亮设置
     $ vim ~/.bash_profile 添加以下代码
-    ``
+    ```
         输入以下内容：
         alias grep='grep --color'
         alias egrep='egrep --color'
         alias fgrep='fgrep --color'
-    ``
+    ```
 
 
 ### 7）增强命令行命令行工具：添加ll、l、la指令
     $ vim ~/.bash_profile 添加以下内容即可
-    ``
+    ```
         输入以下内容
         alias ll='ls -alF'
         alias la='ls -A'
         alias l='ls -CF'
-    ``
+    ```
 
 ### 8）mac电脑安装brew
     $ curl -LsSf http://github.com/mxcl/homebrew/tarball/master | sudo tar xvz -C/usr/local --strip 1
