@@ -1,6 +1,6 @@
 
 
-# Mac上的vim各种配置方法
+# Mac Terminal & vim 配置
 
 ## 一、安装 brew 工具
 
