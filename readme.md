@@ -1,7 +1,6 @@
 
 
 # Mac上的vim各种配置方法
-## 网上教程：http://www.vpsee.com/2013/09/use-the-solarized-color-theme-on-mac-os-x-terminal/
 ## Solarized是目前最完整的Terminal/Editor/IDE配色项目，要在 Mac OS X 终端里舒服的使用命令行（至少）需要给3个工具配色，terminal、vim 和 ls。这里不得不提和Terminal相同功能的工具iTerm2。
 ### 1）下载Solarized：
     
