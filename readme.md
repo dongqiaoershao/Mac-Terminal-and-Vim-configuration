@@ -117,8 +117,33 @@
 - 使用方法，eg：landslide test.md -i -o > test.html
 
 
-### 八、待总结
+### 八、安装php composer
 
+#### 1、安装方法
+
+方法一,使用curl安装: 
+```
+    $ curl -sS https://getcomposer.org/installer | php
+```
+
+方法二,若没有安装curl,可以通过另外一种方式安装: 
+```
+    $ php -r "readfile('https://getcomposer.org/installer');" | php
+```
+
+方法三,手动下载:
+
+[Download Composer](https://getcomposer.org/composer.phar)
+    
+#### 2、将下载好的composer.phar移动到bin中成为全域指令
+```
+    $ sudo mv composer.phar /usr/local/bin/composer
+```
+    
+#### 3修改权限
+```
+    $ sudo chmod a+x composer
+```
 
 
 
